@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 
 const serverApp = express()
-const port = 3000
+const port = process.env.PORT
 const directoryName = process.cwd()
 
 serverApp.use(express.static(path.join(directoryName, 'dist')))
